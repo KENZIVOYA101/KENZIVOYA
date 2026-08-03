@@ -2,8 +2,8 @@
   "settings": {
     "whatsapp": "212659864424",
     "driverName": "السائق",
-    "tagline": "رحلتك من بابك، بلا قلق",
-    "baseCity": "بني ملال"
+    "tagline": "KENZIVOYA©",
+    "baseCity": "الفقيه بن صالح"
   },
   "services": [
     {
@@ -30,26 +30,50 @@
       "date": "2026-08-04",
       "day_ar": "الثلاثاء",
       "slots": [
-        { "time": "07:00", "status": "available" },
-        { "time": "12:00", "status": "booked" },
-        { "time": "17:00", "status": "available" }
+        {
+          "time": "07:00",
+          "status": "available"
+        },
+        {
+          "time": "12:00",
+          "status": "booked"
+        },
+        {
+          "time": "17:00",
+          "status": "available"
+        }
       ]
     },
     {
       "date": "2026-08-05",
       "day_ar": "الأربعاء",
       "slots": [
-        { "time": "08:00", "status": "available" },
-        { "time": "15:00", "status": "available" }
+        {
+          "time": "08:00",
+          "status": "available"
+        },
+        {
+          "time": "15:00",
+          "status": "available"
+        }
       ]
     },
     {
       "date": "2026-08-06",
       "day_ar": "الخميس",
       "slots": [
-        { "time": "06:30", "status": "available" },
-        { "time": "13:00", "status": "booked" },
-        { "time": "19:00", "status": "available" }
+        {
+          "time": "06:30",
+          "status": "available"
+        },
+        {
+          "time": "13:00",
+          "status": "booked"
+        },
+        {
+          "time": "19:00",
+          "status": "available"
+        }
       ]
     }
   ]
