@@ -32,7 +32,7 @@
       "slots": [
         {
           "time": "07:00",
-          "status": "available"
+          "status": "booked"
         },
         {
           "time": "12:00",
