@@ -110,6 +110,7 @@
   .hero-eyebrow { font-family: var(--mono); font-size: 0.8rem; color: var(--red); letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 1.3rem; }
   h1 { font-size: clamp(2.4rem, 5vw, 3.6rem); font-weight: 900; line-height: 1.15; margin-bottom: 1.4rem; }
   h1 em { font-style: normal; color: var(--red); }
+  .hero-line2 { font-family: var(--display); font-weight: 800; font-size: clamp(1.3rem, 2.4vw, 1.7rem); color: var(--ink); margin-top: 1.3rem; margin-bottom: 1.6rem; }
   .hero-desc { color: var(--muted); font-size: 1.08rem; max-width: 480px; margin-bottom: 2.2rem; }
   .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
 
@@ -128,7 +129,7 @@
     background: var(--surface); border: 1px solid var(--line); border-radius: 18px;
     padding: 2rem 1.6rem; box-shadow: 0 30px 60px -30px rgba(139,0,0,0.25);
   }
-  .route-path { position: relative; height: 160px; margin: 1rem 0 1.6rem; }
+  .route-path { position: relative; height: 160px; margin: 1rem 0; }
   .route-line {
     position: absolute; top: 50%; left: 6%; right: 6%; height: 2px;
     background-image: linear-gradient(90deg, var(--red) 60%, transparent 40%);
@@ -317,7 +318,8 @@
   <div class="hero-grid">
     <div>
       <p class="hero-eyebrow">نقل خاص · المغرب</p>
-      <h1>رحلتك من بابك،<br /><em>بلا قلق ولا تأخير</em></h1>
+      <h1>أهلا بكم في <em>KENZIVOYA</em></h1>
+      <p class="hero-line2">رحلتك من بابك</p>
       <p class="hero-desc" id="heroTagline">توصيل من وإلى المطار، ورحلات بين مدن المملكة — احجز وقتك بسهولة وخلي الباقي علينا.</p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="#booking">احجز رحلتك دابا</a>
@@ -327,16 +329,11 @@
     <div class="route-card">
       <div class="route-path">
         <div class="route-line"></div>
-        <div class="route-point start"><div class="route-dot"></div><span id="routeBaseCity">بني ملال</span></div>
+        <div class="route-point start"><div class="route-dot"></div><span id="routeBaseCity">الفقيه بن صالح</span></div>
         <div class="route-point end"><div class="route-dot"></div><span>أي وجهة</span></div>
         <div class="route-car">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 13l1.5-4.5A2 2 0 0 1 6.4 7h11.2a2 2 0 0 1 1.9 1.5L21 13"/><path d="M3 13h18v4a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-1H6v1a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-4Z"/><circle cx="7.5" cy="17.5" r="1.5"/><circle cx="16.5" cy="17.5" r="1.5"/></svg>
         </div>
-      </div>
-      <div class="route-stats">
-        <div class="route-stat"><b>24/7</b><span>متابعة رحلات المطار</span></div>
-        <div class="route-stat"><b>كل المدن</b><span>تغطية وطنية</span></div>
-        <div class="route-stat"><b>واتساب</b><span>حجز مباشر وسريع</span></div>
       </div>
     </div>
   </div>
