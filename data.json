@@ -55,6 +55,10 @@
         {
           "time": "15:00",
           "status": "booked"
+        },
+        {
+          "time": "20:39",
+          "status": "available"
         }
       ]
     },
