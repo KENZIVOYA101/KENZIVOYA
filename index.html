@@ -603,7 +603,7 @@ function showToast(msg) {
   setTimeout(() => t.classList.remove('show'), 2600);
 }
 
-fetch('data.json')
+fetch('data.json', { cache: 'no-store' })
   .then(res => res.json())
   .then(data => { siteData = data; renderAll(); })
   .catch(() => { document.getElementById('board').innerHTML = '<div class="board-day-empty">تعذر تحميل المواقيت.</div>'; });
@@ -677,7 +677,7 @@ document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 /* ─── GitHub API admin (edit mode) ─── */
 const LS_TOKEN_KEY = 'kv_gh_admin_token';
 const LS_REPO_KEY = 'kv_gh_admin_repo';
-let GH_TOKEN = localStorage.getItem(LS_TOKEN_KEY) || '';
+let GH_TOKEN = sessionStorage.getItem(LS_TOKEN_KEY) || '';
 let GH_REPO = localStorage.getItem(LS_REPO_KEY) || '';
 let editMode = false;
 let currentSha = null;
@@ -687,7 +687,7 @@ function b64DecodeUnicode(str) { return decodeURIComponent(escape(atob(str))); }
 
 async function ghFetch(path, options = {}) {
   const url = `https://api.github.com/repos/${GH_REPO}/contents/${path}`;
-  return fetch(url, { ...options, headers: { 'Authorization': `token ${GH_TOKEN}`, 'Accept': 'application/vnd.github+json', ...(options.headers || {}) } });
+  return fetch(url, { ...options, headers: { 'Authorization': `Bearer ${GH_TOKEN}`, 'Accept': 'application/vnd.github+json', ...(options.headers || {}) } });
 }
 
 async function refreshShaAndData() {
@@ -730,7 +730,7 @@ document.getElementById('lockUnlockBtn').addEventListener('click', async () => {
   GH_TOKEN = t; GH_REPO = r;
   try {
     await refreshShaAndData();
-    localStorage.setItem(LS_TOKEN_KEY, GH_TOKEN);
+    sessionStorage.setItem(LS_TOKEN_KEY, GH_TOKEN);
     localStorage.setItem(LS_REPO_KEY, GH_REPO);
     editMode = true;
     editModeToggle.textContent = '🔓';
